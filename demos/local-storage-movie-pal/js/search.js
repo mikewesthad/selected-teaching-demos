@@ -27,7 +27,7 @@ searchResultsDiv.removeChild(movieDisplayTemplate);
 var movieFavorites = new StorableData("movieFavorites");
 
 // Set up the movie searh API request information
-var movieEndpoint = "http://api.themoviedb.org/3/search/movie";
+var movieEndpoint = "https://api.themoviedb.org/3/search/movie";
 var movieParameters = { 
 	api_key: "90310868ad519e2d04de29e0873f434b",
 	movie: "",
