@@ -1,6 +1,7 @@
 .publish
 /**/node_modules
 build
+*.sublime-workspace
 
 # Windows image file caches
 Thumbs.db
