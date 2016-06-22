@@ -1,0 +1,20 @@
+Matrix™ Falling Text
+
+Synthesis time!  We're trying to achieve a matrix-y effect with a particle system - you can see a snapshot of the result in Assignment_Solution.png.
+
+You are going to want a CharacterParticle class and then a CharacterParticleGroup class.  The setup is similar to ball particle exercise, except for three things:
+	1. When you draw the particle, you draw a letter instead of an ellipse.  You'll want to figure out a way to make that letter change every time you update the particle.
+	2. Instead of bouncing, these particles wrap around the screen.  E.g. if one moves off the bottom edge of the screen, it should appear at the top of the screen.
+	3. The screen needs to be cleared using a transparent color (e.g. background(0, 10)) in order to get a motion trail effect.
+
+New p5 variables and functions:
+	textSize(...)
+	text(...)
+	textFont(...) -> Use a font from your computer. Note: you can see the 
+	                 fonts on your computer using http://wordmark.it/
+
+We're giving you a function to get a random character (getRandomCharacter) in sketch.js.  You can (and should) use that code inside of a class when you are ready.
+
+BONUSES:
+	1. Use map(...) to make the x and y velocity of the particles map to the mouse's x and y position. 
+	2. Now use map(...) to control the color of the particles using the mouse position.  You'll probably want to use colorMode(...) to switch to HSB.

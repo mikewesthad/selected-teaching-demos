@@ -1,0 +1,58 @@
+WEATHER + FLICKR - This is not a small assignment! 
+
+Check out Assignment_Finished.png to see the solution in action.
+
+The goal of this assignment is to load up a visual interface for the
+OpenWeatherMap (OWM) forecast (and flex our API muscles).  We're going to 
+make the weather report interactive.  When the user submits a city, the 
+weather report is pulled from OWM and displayed using icons pulled from the
+weather icons library.  As a bonus, a random image from a flickr search for
+the city name is loaded in the background.  Oh yeah, and mix in some CSS3
+animations :)
+
+This is another synthesis challenge.  I'm giving you a starting point, but you are going to have to go out on the internet and read the documentation to figure out the specifics of what to do (links provided below).
+
+I've provided:
+	* A project with animate.css and the weather icon library already set up
+	* A weather-card div that will be your template for cloning.  There's a spot for:
+		- Day of the week (e.g. MON, TUES, etc.)
+		- A weather icon (see api-list link under Weather Icons)
+		- A wind direction icon
+		- A wind speed icon (beaufort wind scale)
+		- High & low temperatures
+	* A form with a text input (that has autocomplete turned off)
+	* A full screen background image div that can take a flickr URL 
+
+I'm going to give you the order in which you should tackle the parts of this project:
+	1. When a user submits a city, you call the OWM API
+	2. The day of the week and high & low temperatures are displayed
+	3. The corresponding weather icons are loaded
+	4. When a user submits a city, you also call the flickr API and find a random image to load in the background div.
+	5. When the weather reports are loaded on the screen, instead of appearing immediately, they fade in using animate.css
+
+OpenWeatherMap API:
+	* http://openweathermap.org/api
+	* http://openweathermap.org/forecast16
+
+Weather Icons:
+	* They are like fontawesome!  You add a special class name to an <i> element and it automagically becomes an icon.
+	* Overview of weather icons: http://erikflowers.github.io/weather-icons/
+	* For how to generate a weather icon from the weather IDs that OWM provides: http://erikflowers.github.io/weather-icons/api-list.html
+	* For wind speed icons: https://en.wikipedia.org/wiki/Beaufort_scale
+
+Flickr:
+	* You'll probably want to do a search for photos using "method=flickr.photos.search".
+	* Sorting the search results by "interestingness" would be smart.
+	* Relevant documentation:
+		- https://www.flickr.com/services/api/
+		- https://www.flickr.com/services/api/misc.overview.html
+		- https://www.flickr.com/services/api/flickr.photos.search.html
+	* You have to do a little work to construct an image URL from a search result: https://www.flickr.com/services/api/misc.urls.html
+
+General tips
+	* COMMENT YOUR CODE!  Leave notes that explain what the different parts of 
+	  your program do.
+	* Debug small chunks of code and debug often.  Don't try to code 
+	  everything all at once!
+	* Plan before you start coding.  Paper & pencil are helpful in wrapping
+	  your head around a problem.

@@ -1,0 +1,59 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<title>My Awesome Sketch :)</title>
+			
+	<style> 
+		/* Remove default style, so that the canvas can be fullscreen. */
+		html, body, canvas {
+			padding: 0; 
+			margin: 0;
+		}
+		.loading figure {
+			width: 400px;
+			display: block;
+			margin: 50px auto 0 auto;
+			text-align: center;
+			font-size: 1.2em;
+			font-family: Century Gothic, sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- 
+		LOADING SCREEN
+		If you put an element on your page with an id of p5_loading, p5js will 
+		find it and remove it when your sketch is done loading.  
+	-->
+	<div id="p5_loading" class="loading">
+		<figure>
+			<img src="assets/loading.gif">
+			<figcaption>
+				loading the fun, please be patient...
+				<br>
+				(sketch powered by <a href="http://p5js.org/" target="_blank">p5js</a>)
+			</figcaption>
+		</figure>
+	</div>
+
+
+
+
+	<!-- JAVASCRIPT -->
+
+	<!-- Core p5js library -->
+	<script language="javascript" type="text/javascript" src="p5.js"></script>
+
+	<!-- p5js addon libraries (uncomment them to use them) -->
+	<script language="javascript" src="p5.sound.js"></script>
+
+	<!-- Your sketch! -->
+	<script language="javascript" type="text/javascript" src="sketch.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+Pirate Translation API (AyePI? ArrPI?)
+
+Synthesis time!  We've got a lot of moving pieces in this one because we are going to make both a server and a client.  See slides/08_PirateAppStructure.pdf.
+
+First, the server sends the static, client-side code (HTML, CSS, JS, images, etc.) over to the client at:
+	localhost:8080/  
+
+Then, the server provides an API endpoint at: 
+	http://localhost:8080/piratespeak
+See api-documentation.pdf for a description of the API.  This endpoint accepts a query parameter containing a string in English and returns a JSON object with a pirate translation.
+
+App Flow:
+	1. Client loads localhost:8080/, which sends a GET request to server
+	2. The server responds with the static client-side code
+	3. Client receives the code and executes it (rendering the webpage)
+	4. User enters English text in client/browser and hits "piratize" button
+	5. Client queries server's /piratespeak API (via XMLHttpRequest) and sends the English text along as a querystring
+	6. Server parses English text, translates it and sends back JSON
+	7. Client renders translation
+
+Project milestones
+==================
+Since there are a lot of moving parts here, the goal is to build and debug them *separately*.
+
+	1. Build & test a pirate translation module in node.  This does not involve a client or a server.
+	2. Build the /piratespeak API.  This does not involve the client-side form yet.  Test the API in the browser by going to URLs like:
+		http://localhost:8080/piratespeak?text=hey%20there%20buddy
+	3. Serve the client-side code to localhost:8080/ using Express.
+	4. Make a non-interactive API request from the client-side JS to /piratespeak.  This means hard coding a test request that doesn't need the form.
+	5. Wire up the form so that it makes an interactive API request to the server.
