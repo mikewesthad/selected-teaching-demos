@@ -44,7 +44,7 @@ var paths = {
         dest: dest + "/js"
     },
     deploy: {
-        src: dest + "**/*"
+        src: dest + "/**/*"
     }
 };
 
@@ -187,7 +187,7 @@ gulp.task("run", [
 
 // Push files in build/ to a gh-pages branch
 gulp.task("push:gh-pages", function () {
-    return gulp.src(paths.deploy.src)
+    return gulp.src(paths.deploy.src, { base: "build" })
         .pipe(ghPages({
             remoteUrl: "https://github.com/mikewesthad/selected-teaching-demos.git"
         }));
