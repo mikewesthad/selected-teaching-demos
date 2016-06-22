@@ -1,0 +1,16 @@
+extends ./_html5-layout.jade
+
+mixin description(title, course)
+    #description-wrap        
+        a.close(href="#")
+        h1.title!=title
+        h2.course-name!=course
+        div.description-text
+            block
+
+mixin demo(src)
+    #demo-wrap
+        iframe(src=src, frameborder="0")
+
+block scripts
+  script(src="js/main.js")
