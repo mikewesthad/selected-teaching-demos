@@ -26,6 +26,13 @@
 	<!-- Your sketch! -->
 	<script language="javascript" type="text/javascript" src="sketch.js"></script>
 
+	<!-- Disable Right Click Menu -->
+	<script>
+		document.body.oncontextmenu = function (event) { 
+			event.preventDefault();
+			return false; 
+		}
+	</script>
 </body>
 
 </html>

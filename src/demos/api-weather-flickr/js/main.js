@@ -175,7 +175,7 @@ function processFlickr() {
 		var server = randomResult["server"]; 
 		var farm = randomResult["farm"];  
 		var photoURL = "https://farm" + farm + ".staticflickr.com/";
-		photoURL += server + "/" + id + "_" + secret + "_z.jpg";
+		photoURL += server + "/" + id + "_" + secret + "_b.jpg";
 
 		// Update the background image to be the flickr URL
 		weatherBackground.style.backgroundImage = "url('" + photoURL + "')";

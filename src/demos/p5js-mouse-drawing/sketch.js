@@ -28,7 +28,7 @@ function draw() {
 
 	// EXTRA 2
 	// Clear the screen using transparency - this creates a motion trail effect
-	background(0, 0, 0, 5);
+	background(0, 0, 0, 3);
 
 	// Pick a style
 	fill(255, 255, 255);
@@ -43,8 +43,8 @@ function draw() {
 			// ellipse(mouseX, mouseY, 100, 100);
 
 			// EXTRA 4
-			for (var radius = 20; radius <= 300; radius += 20) {
-				fill(255, 0, 0, 3);
+			for (var radius = 10; radius <= 150; radius += 10) {
+				fill(255, 0, 0, 6);
 				noStroke();
 				ellipse(mouseX, mouseY, radius, radius);
 			}
