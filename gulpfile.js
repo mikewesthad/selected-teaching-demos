@@ -157,6 +157,7 @@ gulp.task("watch", function () {
     gulp.watch(paths.jade.src, ["jade"]);
     gulp.watch(paths.js.src, ["js"]);
     gulp.watch(paths.sass.src, ["sass"]);
+    gulp.watch(paths.copy.src, ["copy"]);
 });
 
 // Start an express server that serves everything in build/ to localhost:8080/.
