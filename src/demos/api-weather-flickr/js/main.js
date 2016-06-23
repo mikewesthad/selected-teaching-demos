@@ -4,10 +4,6 @@
 // For OpenWeatherMap, we want to get the 15 day forecast in imperial units, 
 // because our brains can't think in the crazy crazy metric system.
 var owmEndpoint = "http://api.openweathermap.org/data/2.5/forecast/daily";
-// NOTE: This next line is something I've had to add after the class. Since I'm
-// hosting this via HTTPS, no APIs can be reached via HTTP. Instead, this 
-// request is going to be forwarded through a node app of mine: 
-var owmEndpoint = "https://api-forwarding.herokuapp.com/?url=" + owmEndpoint;
 var owmParameters = {
 	"mode": "json",
 	"units": "imperial",
@@ -56,6 +52,11 @@ form.onsubmit = function (event) {
 
 	owmParameters.q = cityName;
 	var owmCall = buildApiRequest(owmEndpoint, owmParameters);
+	// NOTE: This next line is something I've had to add after the class. Since I'm
+	// hosting this via HTTPS, no APIs can be reached via HTTP. Instead, this 
+	// request is going to be forwarded through a node app of mine: 
+	owmCall = "https://api-forwarding.herokuapp.com/?url=" + 
+		encodeURIComponent(owmCall);
 	callApi(owmCall, processWeatherReport);
 
 	flickrParameters.text = cityName;
