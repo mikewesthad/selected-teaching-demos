@@ -17,6 +17,7 @@ html, body {
   position: fixed;
   top: 20px;
   right: 20px;
+  max-width: calc(100% - 70px);
   width: 450px;
   border: 1px solid #d4d4d4;
   border-radius: 5px;
